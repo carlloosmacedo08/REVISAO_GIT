@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teclas de Atalho do Visual Studio Code</title>
+    <style>
+      :root {
+        --bg: #0f172a;
+        --panel: #111827;
+        --panel-alt: #1f2937;
+        --text: #e5e7eb;
+        --muted: #9ca3af;
+        --accent: #60a5fa;
+        --accent-2: #34d399;
+        --border: #374151;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(135deg, #0f172a, #111827);
+        color: var(--text);
+        padding: 40px 20px;
+      }
+
+      .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        background: rgba(17, 24, 39, 0.95);
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        box-shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
+        overflow: hidden;
+      }
+
+      header {
+        padding: 32px 28px;
+        border-bottom: 1px solid var(--border);
+        background: linear-gradient(135deg, #1f2937, #111827);
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(1.8rem, 4vw, 2.8rem);
+      }
+
+      p.subtitle {
+        margin: 10px 0 0;
+        color: var(--muted);
+        font-size: 1rem;
+      }
+
+      .section {
+        padding: 24px 28px;
+      }
+
+      .section + .section {
+        border-top: 1px solid var(--border);
+      }
+
+      h2 {
+        margin-top: 0;
+        margin-bottom: 16px;
+        font-size: 1.3rem;
+        color: var(--accent-2);
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        background: var(--panel-alt);
+        border-radius: 12px;
+        overflow: hidden;
+      }
+
+      th,
+      td {
+        padding: 14px 16px;
+        text-align: left;
+        border-bottom: 1px solid var(--border);
+        vertical-align: top;
+      }
+
+      th {
+        background: #0b1220;
+        color: var(--accent);
+        font-size: 0.95rem;
+      }
+
+      td:first-child {
+        width: 220px;
+      }
+
+      .keys {
+        display: inline-flex;
+        flex-wrap: wrap;
+        gap: 6px;
+      }
+
+      .key {
+        background: #0b1220;
+        border: 1px solid var(--border);
+        border-bottom-width: 2px;
+        border-radius: 8px;
+        padding: 6px 10px;
+        font-weight: 700;
+        color: var(--text);
+        font-size: 0.85rem;
+        box-shadow: inset 0 -1px 0 rgba(255,255,255,0.03);
+      }
+
+      .tag {
+        display: inline-block;
+        padding: 4px 8px;
+        border-radius: 999px;
+        background: rgba(96, 165, 250, 0.15);
+        color: var(--accent);
+        border: 1px solid rgba(96, 165, 250, 0.3);
+        font-size: 0.8rem;
+      }
+
+      @media (max-width: 700px) {
+        th,
+        td {
+          display: block;
+          width: 100%;
+        }
+
+        tr {
+          border-bottom: 1px solid var(--border);
+        }
+
+        th {
+          display: none;
+        }
+
+        td:first-child {
+          width: 100%;
+          font-weight: 700;
+          color: var(--accent-2);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Teclas de Atalho do Visual Studio Code</h1>
+        <p class="subtitle">Principais combinações para aumentar produtividade no editor.</p>
+      </header>
+
+      <div class="section">
+        <h2>Geral</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Ação</th>
+              <th>Atalho</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Pesquisar arquivo</td>
+              <td>
+                <div class="keys">
+                  <span class="key">Ctrl</span><span class="key">P</span>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Comandos do editor</td>
+              <td>
+                <div class="keys">
+                  <span class="key">Ctrl</span><span class="key">Shift</span><span class="key">P</span>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Nova janela</td>
+              <td>
+                <div class="keys">
+                  <span class="key">Ctrl</span><span class="key">Shift</span><span class="key">N</span>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Fechar janela</td>
+              <td>
+                <div class="keys">
+                  <span class="key">Ctrl</span><span class="key">W</span>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Salvar arquivo</td>
+              <td>
+                <div class="keys">
+                  <span class="key">Ctrl</span><span class="key">S</span>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Salvar tudo</td>
+              <td>
+                <div class="keys">
+                  <span class="key">Ctrl</span><span class="key">K</span><span class="key">S</span>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="section">
+        <h2>Editar</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Ação</th>
+              <th>Atalho</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Copiar linha</td>
+              <td>
+                <div class="keys">
+                  <span class="key">Shift</span><span class="key">Alt</span><span class="key">↑</span>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Mover linha</td>
+              <td>
+                <div class="keys">
+                  <span class="key">Alt</span><span class="key">↑</span>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Duplicar linha</td>
+              <td>
+                <div class="keys">
+                  <span class="key">Shift</span><span class="key">Alt</span><span class="key">↓</span>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Excluir linha</td>
+              <td>
+                <div class="keys">
+                  <span class="key">Ctrl</span><span class="key">Shift</span><span class="key">K</span>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Comentar linha</td>
+              <td>
+                <div class="keys">
+                  <span class="key">Ctrl</span><span class="key">/</span>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Indentar / desindentar</td>
+              <td>
+                <div class="keys">
+                  <span class="key">Tab</span>
+                  <span class="key">/</span>
+                  <span class="key">Shift</span><span class="key">Tab</span>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="section">
+        <h2>Busca e navegação</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Ação</th>
+              <th>Atalho</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Localizar</td>
+              <td>
+                <div class="keys">
+                  <span class="key">Ctrl</span><span class="key">F</span>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Substituir</td>
+              <td>
+                <div class="keys">
+                  <span class="key">Ctrl</span><span class="key">H</span>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Ir para linha</td>
+              <td>
+                <div class="keys">
+                  <span class="key">Ctrl</span><span class="key">G</span>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Ir para definição</td>
+              <td>
+                <div class="keys">
+                  <span class="key">F12</span>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Visualizar referências</td>
+              <td>
+                <div class="keys">
+                  <span class="key">Shift</span><span class="key">F12</span>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Alternar entre arquivos abertos</td>
+              <td>
+                <div class="keys">
+                  <span class="key">Ctrl</span><span class="key">Tab</span>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="section">
+        <h2>Terminal e depuração</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Ação</th>
+              <th>Atalho</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Terminal integrado</td>
+              <td>
+                <div class="keys">
+                  <span class="key">Ctrl</span><span class="key">`</span>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Executar depuração</td>
+              <td>
+                <div class="keys">
+                  <span class="key">F5</span>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Parar depuração</td>
+              <td>
+                <div class="keys">
+                  <span class="key">Shift</span><span class="key">F5</span>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Iniciar sem depurar</td>
+              <td>
+                <div class="keys">
+                  <span class="key">Ctrl</span><span class="key">F5</span>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="section">
+        <h2>Atalhos úteis</h2>
+        <p>
+          <span class="tag">Ctrl + B</span>
+          <span class="tag">Ctrl + J</span>
+          <span class="tag">Ctrl + Shift + E</span>
+          <span class="tag">Ctrl + Shift + F</span>
+          <span class="tag">Ctrl + Shift + L</span>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
